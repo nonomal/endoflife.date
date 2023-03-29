@@ -5,6 +5,7 @@ iconSlug: apachetomcat
 releasePolicyLink: https://tomcat.apache.org/whichversion.html
 changelogTemplate: https://dlcdn.apache.org/tomcat/tomcat-__RELEASE_CYCLE__/v__LATEST__/RELEASE-NOTES
 category: server-app
+tags: apache web-server
 activeSupportColumn: false
 auto:
 -   maven: org.apache.tomcat/tomcat

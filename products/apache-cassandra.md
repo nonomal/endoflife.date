@@ -7,6 +7,7 @@ iconSlug: apachecassandra
 releaseDateColumn: true
 changelogTemplate: 'https://gitbox.apache.org/repos/asf?p=cassandra.git;a=blob_plain;f=NEWS.txt;hb=refs/tags/cassandra-__LATEST__'
 category: db
+tags: apache java-runtime
 releasePolicyLink: https://cassandra.apache.org/_/blog/Behind-the-scenes-of-an-Apache-Cassandra-Release.html
 auto:
 -   git: https://github.com/apache/cassandra.git

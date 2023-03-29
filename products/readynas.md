@@ -1,6 +1,7 @@
 ---
 title: Netgear ReadyNAS
 category: device
+tags: linux-distribution
 changelogTemplate: "https://www.netgear.com/support/product/__RELEASE_CYCLE__.aspx"
 releases:
 -   releaseCycle: "RR4360X"

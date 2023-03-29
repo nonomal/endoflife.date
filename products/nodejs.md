@@ -4,6 +4,7 @@ alternate_urls:
 -   /node
 -   /node.js
 category: framework
+tags: javascript-runtime
 title: Node.js
 iconSlug: nodedotjs
 releasePolicyLink: https://nodejs.org/about/releases/

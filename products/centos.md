@@ -1,6 +1,7 @@
 ---
 title: CentOS
 category: os
+tags: linux-distribution
 iconSlug: centos
 permalink: /centos
 versionCommand: lsb_release --release

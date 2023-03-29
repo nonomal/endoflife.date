@@ -47,7 +47,7 @@ releases:
 
 ---
 
-> [Couchbase Server](https://www.couchbase.com/products/server) is a modern cloud-native, distributed database that fuses the strengths of relational databases such as SQL and ACID transactions with JSON flexibility and scale that defines NoSQL. It is available as a service in commercial clouds and supports hybrid and private cloud deployments. 
+> [Couchbase Server](https://www.couchbase.com/products/server) is a modern cloud-native, distributed database that fuses the strengths of relational databases such as SQL and ACID transactions with JSON flexibility and scale that defines NoSQL. It is available as a service in commercial clouds and supports hybrid and private cloud deployments.
 
 Security updates stop when a release reaches end of "Full Maintenance". Major versions are supported for the longer period between:
 

@@ -1,6 +1,7 @@
 ---
 title: Symfony
 category: framework
+tags: php-runtime
 iconSlug: symfony
 permalink: /symfony
 releasePolicyLink: https://symfony.com/releases

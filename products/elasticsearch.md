@@ -1,6 +1,7 @@
 ---
 title: Elasticsearch
 category: db
+tags: elastic
 iconSlug: elasticsearch
 permalink: /elasticsearch
 versionCommand: $ES_HOME/bin/elasticsearch -v

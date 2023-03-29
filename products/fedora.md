@@ -1,6 +1,7 @@
 ---
 title: Fedora Linux
 category: os
+tags: linux-distribution
 iconSlug: fedora
 permalink: /fedora
 releasePolicyLink: https://fedoraproject.org/wiki/End_of_life

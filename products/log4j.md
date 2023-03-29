@@ -5,6 +5,7 @@ alternate_urls:
 -   /apache_log4j
 -   /apache-log4j
 category: framework
+tags: java-runtime
 releasePolicyLink: https://logging.apache.org/log4j/2.x/security.html
 changelogTemplate: https://logging.apache.org/log4j/2.x/changes-report.html#a{{"__LATEST__"}}
 activeSupportColumn: false
