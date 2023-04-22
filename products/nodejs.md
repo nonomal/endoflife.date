@@ -2,7 +2,6 @@
 permalink: /nodejs
 alternate_urls:
 -   /node
--   /node.js
 category: framework
 title: Node.js
 iconSlug: nodedotjs
