@@ -1,37 +1,50 @@
 ---
 title: Joomla!
 category: server-app
+tags: php-runtime
 iconSlug: joomla
 permalink: /joomla
 releasePolicyLink: https://docs.joomla.org/Release_and_support_cycle
-changelogTemplate: "https://docs.joomla.org/Special:MyLanguage/Joomla_{{'__LATEST__'\
-  \ | split: '.' | slice: 0, 2 | join: '.'}}_version_history#Joomla___LATEST__"
-activeSupportColumn: true
-releaseColumn: true
+changelogTemplate: "https://docs.joomla.org/Special:MyLanguage/Joomla_{{'__LATEST__'|split:'.'|slice:0,2|join:'.'}}_version_history#Joomla___LATEST__"
 releaseDateColumn: true
+eoasColumn: true
+
+identifiers:
+-   repology: joomla
 
 auto:
--   git: https://github.com/joomla/joomla-cms.git
+  methods:
+  -   git: https://github.com/joomla/joomla-cms.git
 
+# eol see https://developer.joomla.org/roadmap.html
 releases:
+-   releaseCycle: "5"
+    releaseDate: 2023-10-14
+    eoas: false
+    eol: 2027-10-19
+    latest: "5.2.3"
+    latestReleaseDate: 2024-12-21
+    # check later for removal: link with changelogTemplate does not work (yet)
+    link: https://www.joomla.org/announcements/release-news/5900-joomla-5-0-and-joomla-4-4-are-here
+
 -   releaseCycle: "4"
-    eol: false
-    support: true
     releaseDate: 2021-08-17
-    latest: "4.3.1"
-    latestReleaseDate: 2023-04-30
+    eoas: 2024-10-17
+    eol: 2025-10-17
+    latest: "4.4.10"
+    latestReleaseDate: 2024-12-28
 
 -   releaseCycle: "3"
-    eol: 2023-08-17
-    support: false
     releaseDate: 2012-09-27
-    latest: "3.10.11"
-    latestReleaseDate: 2022-08-14
+    eoas: 2021-08-17
+    eol: 2023-08-17
+    latest: "3.10.12"
+    latestReleaseDate: 2023-07-08
 
 ---
 
-> [Joomla!](https://www.joomla.org/) is an award-winning content management system (CMS), which enables you to
-> build websites and powerful online applications.
+> [Joomla!](https://www.joomla.org/) is an award-winning content management system (CMS), which
+> enables you to build websites and powerful online applications.
 
 - Each major version is supported for at least 4 years.
 - Each major version gets a minimum of 2 years of active development.

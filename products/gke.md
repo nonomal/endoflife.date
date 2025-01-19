@@ -1,6 +1,7 @@
 ---
 title: Google Kubernetes Engine
 category: service
+tags: google managed-kubernetes
 iconSlug: kubernetes
 permalink: /google-kubernetes-engine
 alternate_urls:
@@ -8,92 +9,131 @@ alternate_urls:
 versionCommand: kubectl version
 releasePolicyLink: https://cloud.google.com/kubernetes-engine/docs/release-schedule
 changelogTemplate: https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel
-activeSupportColumn: true
-releaseColumn: true
+eoasColumn: true
 releaseDateColumn: true
 eolColumn: Maintenance Support
 
 auto:
--   custom: true
+  methods:
+  -   custom: gke
 
-# eol: As on the release schedule page
-# releaseDate: As per https://github.com/endoflife-date/release-data/blob/main/releases/gke.json
-# support: last-date-in-month(eol - 2months)
+# eol: As per https://cloud.google.com/kubernetes-engine/docs/release-schedule
+# eoas:last-date-in-month(eol - 2months)
 releases:
+-   releaseCycle: "1.31"
+    releaseDate: 2024-10-25
+    eoas: 2025-09-30
+    eol: 2025-12-22
+    latest: '1.31.4-gke.1372000'
+    latestReleaseDate: 2025-01-14
+
+-   releaseCycle: "1.30"
+    releaseDate: 2024-07-31
+    eoas: 2025-07-31
+    eol: 2025-09-30
+    latest: '1.30.8-gke.1261000'
+    latestReleaseDate: 2025-01-14
+
+-   releaseCycle: "1.29"
+    releaseDate: 2024-01-26
+    eoas: 2025-01-31
+    eol: 2025-03-21
+    latest: '1.29.12-gke.1270000'
+    latestReleaseDate: 2025-01-14
+
+-   releaseCycle: "1.28"
+    releaseDate: 2023-12-04
+    eoas: 2024-12-31
+    eol: 2025-02-04
+    latest: '1.28.15-gke.1612000'
+    latestReleaseDate: 2025-01-14
+
+-   releaseCycle: "1.27"
+    releaseDate: 2023-06-15
+    eoas: 2024-06-30
+    eol: 2024-08-31
+    latest: '1.27.16-gke.2246000'
+    latestReleaseDate: 2025-01-14
+
 -   releaseCycle: "1.26"
-    eol: 2024-05-31
-    support: 2024-03-31
     releaseDate: 2023-03-31
-    latestReleaseDate: 2023-05-09
-    latest: '1.26.4-gke.500'
+    eoas: 2024-04-30
+    eol: 2024-06-30
+    latest: '1.26.15-gke.1469001'
+    latestReleaseDate: 2024-07-03
 
 -   releaseCycle: "1.25"
-    eol: 2024-02-29
-    support: 2023-12-31
     releaseDate: 2022-12-14
-    latestReleaseDate: 2023-05-09
-    latest: '1.25.9-gke.400'
+    eoas: 2024-01-31
+    eol: 2024-03-30
+    latest: '1.25.16-gke.1759000'
+    latestReleaseDate: 2024-04-18
 
 -   releaseCycle: "1.24"
-    eol: 2023-10-31
-    support: 2023-08-31
     releaseDate: 2022-06-23
-    latestReleaseDate: 2023-05-09
-    latest: '1.24.13-gke.500'
+    eol: 2023-10-31
+    eoas: 2023-08-31
+    latest: '1.24.17-gke.2472000'
+    latestReleaseDate: 2024-01-11
 
 -   releaseCycle: "1.23"
-    eol: 2023-07-31
-    support: 2023-05-31
     releaseDate: 2022-05-03
-    latestReleaseDate: 2023-05-09
-    latest: '1.23.17-gke.3600'
+    eol: 2023-07-31
+    eoas: 2023-05-31
+    latest: '1.23.17-gke.10700'
+    latestReleaseDate: 2023-08-08
 
 -   releaseCycle: "1.22"
-    eol: 2023-04-30
-    support: 2023-02-28
-    latest: '1.22.17-gke.9400'
     releaseDate: 2022-03-07
-    latestReleaseDate: 2023-05-09
+    eoas: 2023-02-28
+    eol: 2023-04-30
+    latest: '1.22.17-gke.14100'
+    latestReleaseDate: 2023-07-07
 
 -   releaseCycle: "1.21"
-    eol: 2023-01-31
-    support: 2022-11-01
-    latest: '1.21.14-gke.18800'
     releaseDate: 2021-10-01
+    eoas: 2022-11-01
+    eol: 2023-01-31
+    latest: '1.21.14-gke.18800'
     latestReleaseDate: 2023-03-22
 
 -   releaseCycle: "1.20"
-    eol: 2022-08-01
-    support: 2021-12-01
-    latest: '1.20.15-gke.13700'
     releaseDate: 2021-06-09
+    eoas: 2021-12-01
+    eol: 2022-08-01
+    latest: '1.20.15-gke.13700'
     latestReleaseDate: 2022-08-18
 
 -   releaseCycle: "1.19"
-    eol: 2022-06-01
-    support: 2021-10-01
-    latest: '1.19.16-gke.15700'
     releaseDate: 2021-04-14
+    eoas: 2021-10-01
+    eol: 2022-06-01
+    latest: '1.19.16-gke.15700'
     latestReleaseDate: 2022-06-23
 
 -   releaseCycle: "1.18"
-    eol: 2022-03-01
-    support: 2021-08-01
-    latest: '1.18.20-gke.6000'
     releaseDate: 2021-03-29
+    eoas: 2021-08-01
+    eol: 2022-03-01
+    latest: '1.18.20-gke.6000'
     latestReleaseDate: 2021-09-17
 
 -   releaseCycle: "1.17"
-    eol: 2021-11-01
-    support: 2021-07-01
-    latest: '1.17.17-gke.9100'
     releaseDate: 2021-03-29
+    eoas: 2021-07-01
+    eol: 2021-11-01
+    latest: '1.17.17-gke.9100'
     latestReleaseDate: 2021-06-09
 
 ---
 
 > [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine) is the fully managed
 > Kubernetes service from Google.
+
+{: .warning }
+> This page uses release information from the _No Channel (Static)_ channel.
+> Releases only present in the _Rapid_ channel are not considered stable because they are excluded from
+> [GKE SLA](https://cloud.google.com/kubernetes-engine/sla).
 
 GKE offers two modes of operations:
 [Standard and Autopilot](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#comparison "Comparing Autopilot and Standard modes at GKE Docs"):

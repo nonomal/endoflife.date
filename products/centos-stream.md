@@ -1,11 +1,12 @@
 ---
 title: CentOS Stream
 category: os
+tags: linux-distribution
 iconSlug: centos
 permalink: /centos-stream
 versionCommand: cat /etc/redhat-release
-releasePolicyLink: https://wiki.centos.org/About/Product
-activeSupportColumn: true
+releasePolicyLink: https://centos.org/stream9/
+eoasColumn: true
 releaseDateColumn: true
 
 identifiers:
@@ -13,19 +14,26 @@ identifiers:
 -   cpe: cpe:2.3:o:centos:stream
 
 releases:
+-   releaseCycle: "10"
+    releaseDate: 2024-12-12
+    eoas: 2030-01-01
+    eol: 2030-01-01
+    latest: "10"
+    link: https://blog.centos.org/2024/12/introducing-centos-stream-10/
+
 -   releaseCycle: "9"
     releaseDate: 2021-09-15
-    support: 2027-05-31
+    eoas: 2027-05-31
     eol: 2027-05-31
     latest: "9"
     link: https://blog.centos.org/2021/12/introducing-centos-stream-9/
 
 -   releaseCycle: "8"
     releaseDate: 2019-09-24
-    support: 2024-05-31
+    eoas: 2024-05-31
     eol: 2024-05-31
     latest: "8"
-    link: https://wiki.centos.org/Manuals/ReleaseNotes/CentOSStream
+    link: http://web.archive.org/web/20230417021744/https://wiki.centos.org/Manuals/ReleaseNotes/CentOSStream
 
 ---
 

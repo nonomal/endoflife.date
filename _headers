@@ -44,7 +44,7 @@ layout: null
   Access-Control-Max-Age: 86400
 
 # Configuration for all "pages" in the website (e.g. product pages, website pages such as / or /recommendations, API "pages"...).
-{% assign defaultCspImgSrc="'self' https://img.shields.io https://www.netlify.com https://simpleicons.org/ https://github.githubassets.com/ https://user-images.githubusercontent.com/" %}
+{% assign defaultCspImgSrc="'self' https://img.shields.io https://www.netlify.com https://cdn.jsdelivr.net/ https://github.githubassets.com/ https://user-images.githubusercontent.com/ https://github-production-user-asset-6210df.s3.amazonaws.com" %}
 {%- for page in site.html_pages -%}
 {{page.url}}
   {%- if page.layout == 'product' %}
@@ -57,7 +57,7 @@ layout: null
     Link: /api{{page.permalink}}.json; rel=alternate;type=application/json
     Link: /calendar{{page.permalink}}.ics; rel=alternate;type=text/calendar
   {% elsif page.permalink == '/docs/api' %}
-    Content-Security-Policy: default-src 'none'; manifest-src 'self'; connect-src 'self'; script-src 'self' https://unpkg.com/@stoplight/elements/web-components.min.js; style-src 'self' https://unpkg.com/@stoplight/elements/
+    Content-Security-Policy: default-src 'none'; manifest-src 'self'; connect-src 'self'; script-src 'self' https://unpkg.com/@stoplight/elements/web-components.min.js; style-src 'self' https://unpkg.com/@stoplight/elements/ 'unsafe-inline'
   {% else %}
     Content-Security-Policy: default-src 'none'; manifest-src 'self'; connect-src 'self'; script-src 'self'; style-src 'self'; img-src {{ defaultCspImgSrc }}
   {% endif %}

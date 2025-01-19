@@ -17,6 +17,7 @@ layout: null
     {%- endfor %}
   {%- endif %}
   {%- if page.layout == 'product'  %}
+{{page.permalink}}/_edit     https://github.com/endoflife-date/endoflife.date/edit/master/{{page.path}}
 /api{{page.permalink}}       /api{{page.permalink}}.json
     {%- if page.alternate_urls  %}
       {%- for url in page.alternate_urls %}
@@ -29,5 +30,21 @@ layout: null
 
 {% endfor %}
 
+# Clients will try to access /favicon.ico, in some scenarios
+# we don't want the file in our codebase, because the theme
+# embeds it as a favicon, so instead set a redirect for
+# these clients to a PNG file instead.
+/favicon.ico /assets/favicon-32x32.png
+
 # Send API 404 responses in JSON
 /api/* /assets/404.json 404
+
+# A few permanent redirects for removed pages
+/tags/api-gateway                  /tags/web-server
+/tags/configuration-management     /
+/tags/db                           /tags/database
+/tags/library                      /tags/framework
+/tags/managed-mysql                /tags/database
+/tags/managed-postgresql           /tags/database
+/tags/package-manager              /tags/build-tool
+/tags/redhat                       /tags/red-hat

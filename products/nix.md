@@ -7,22 +7,84 @@ alternate_urls:
 -   /nixlang
 versionCommand: nix --version
 releasePolicyLink: https://nixos.org/blog/announcements.html
-changelogTemplate: https://nixos.org/manual/nix/stable/release-notes/rl-__RELEASE_CYCLE__.html
-activeSupportColumn: false
-releaseColumn: true
+changelogTemplate: https://nix.dev/manual/nix/latest/release-notes/rl-__RELEASE_CYCLE__
 releaseDateColumn: true
 
-auto:
--   git: https://github.com/NixOS/nix.git
+identifiers:
+-   repology: nix
 
-# when adding a new release mark the previous release EOL until a more detailed
+auto:
+  methods:
+  -   git: https://github.com/NixOS/nix.git
+
+# eol(x) = releaseDate(x+1), until a more detailed
 # policy is provided - https://github.com/NixOS/nix/issues/6063
 releases:
+-   releaseCycle: "2.25"
+    releaseDate: 2024-11-11
+    eol: false # releaseDate(2.26)
+    latest: "2.25.4"
+    latestReleaseDate: 2025-01-13
+
+-   releaseCycle: "2.24"
+    releaseDate: 2024-08-01
+    eol: 2024-11-11 # releaseDate(2.25)
+    latest: "2.24.11"
+    latestReleaseDate: 2024-12-10
+
+-   releaseCycle: "2.23"
+    releaseDate: 2024-06-12
+    eol: 2024-08-01
+    latest: "2.23.4"
+    latestReleaseDate: 2024-10-31
+
+-   releaseCycle: "2.22"
+    releaseDate: 2024-04-23
+    eol: 2024-06-12
+    latest: "2.22.4"
+    latestReleaseDate: 2024-10-31
+
+-   releaseCycle: "2.21"
+    releaseDate: 2024-03-11
+    eol: 2024-04-23
+    latest: "2.21.5"
+    latestReleaseDate: 2024-10-31
+
+-   releaseCycle: "2.20"
+    releaseDate: 2024-01-29
+    eol: 2024-03-11
+    latest: "2.20.9"
+    latestReleaseDate: 2024-10-31
+
+-   releaseCycle: "2.19"
+    releaseDate: 2023-11-20
+    eol: 2024-01-29
+    latest: "2.19.7"
+    latestReleaseDate: 2024-10-31
+
+-   releaseCycle: "2.18"
+    releaseDate: 2023-09-20
+    eol: 2023-11-17 # releaseDate(2.19)
+    latest: "2.18.9"
+    latestReleaseDate: 2024-10-31
+
+-   releaseCycle: "2.17"
+    releaseDate: 2023-07-24
+    eol: 2023-09-20
+    latest: "2.17.2"
+    latestReleaseDate: 2024-03-15
+
+-   releaseCycle: "2.16"
+    releaseDate: 2023-05-31
+    eol: 2023-07-24
+    latest: "2.16.3"
+    latestReleaseDate: 2024-03-15
+
 -   releaseCycle: "2.15"
     releaseDate: 2023-04-11
-    eol: false # Update to release date of 2.16 when released
-    latest: "2.15.0"
-    latestReleaseDate: 2023-04-11
+    eol: 2023-05-31
+    latest: "2.15.3"
+    latestReleaseDate: 2023-10-19
 
 -   releaseCycle: "2.14"
     releaseDate: 2023-02-28
@@ -33,8 +95,8 @@ releases:
 -   releaseCycle: "2.13"
     releaseDate: 2023-01-17
     eol: 2023-02-28
-    latest: "2.13.3"
-    latestReleaseDate: 2023-02-27
+    latest: "2.13.6"
+    latestReleaseDate: 2023-10-18
 
 -   releaseCycle: "2.12"
     releaseDate: 2022-12-06
@@ -93,8 +155,8 @@ releases:
 -   releaseCycle: "2.3"
     releaseDate: 2019-09-04
     eol: 2021-11-01
-    latest: "2.3.16"
-    latestReleaseDate: 2021-10-07
+    latest: "2.3.18"
+    latestReleaseDate: 2024-03-07
 
 -   releaseCycle: "2.2"
     releaseDate: 2019-01-11
@@ -117,8 +179,7 @@ releases:
 -   releaseCycle: "1"
     releaseDate: 2012-05-11
     eol: 2018-02-22
-    # https://nixos.org/manual/nix/stable/release-notes/rl-1.html return a 404
-    link: null
+    link: https://nixos.org/manual/nix/stable/release-notes/rl-1.11
     latest: "1.11.16"
     latestReleaseDate: 2017-12-20
 

@@ -1,6 +1,7 @@
 ---
 title: Logstash
 category: server-app
+tags: elastic
 iconSlug: logstash
 permalink: /logstash
 releasePolicyLink: https://www.elastic.co/support_policy
@@ -8,22 +9,26 @@ changelogTemplate: "https://www.elastic.co/guide/en/logstash/{{'__LATEST__'|spli
 eolColumn: Support
 releaseDateColumn: true
 
+identifiers:
+-   repology: logstash
+-   cpe: cpe:/a:elastic:logstash
+-   cpe: cpe:2.3:a:elastic:logstash
+
 auto:
--   git: https://github.com/elastic/logstash.git
+  methods:
+  -   git: https://github.com/elastic/logstash.git
 
 releases:
 -   releaseCycle: "8"
-    # the longest between this date and 6 months after the 9.0.0
-    eol: 2023-10-26
-    latest: "8.7.1"
-    latestReleaseDate: 2023-05-02
+    eol: false # later of 2024-08-10 or 18 months after the release date of 9.0
+    latest: "8.17.0"
+    latestReleaseDate: 2024-12-04
     releaseDate: 2022-02-10
 
 -   releaseCycle: "7"
-    # Maintained until 9.0.0
-    eol: 2023-08-01
-    latest: "7.17.10"
-    latestReleaseDate: 2023-05-02
+    eol: false # later of 2023-08-01 or the release date of 9.0
+    latest: "7.17.27"
+    latestReleaseDate: 2025-01-07
     releaseDate: 2019-04-05
 
 -   releaseCycle: "6"
@@ -43,7 +48,7 @@ other products in the Elastic Stack (Elasticsearch, Kibana, Beats...).
 
 Elastic Stack product releases follow [Semantic Versioning](https://semver.org/). Elastic provides
 maintenance for each major release series for the longest of 30 months after the GA date of the
-major release or 6 months after the GA date of the subsequent major release.
+major release or 18 months after the GA date of the subsequent major release.
 
 End of life dates for Logstash can be found on the [Elastic product EOL dates page](https://www.elastic.co/support/eol).
 Support for various operating systems can also be found on the [Elastic support matrix page](https://www.elastic.co/support/matrix).

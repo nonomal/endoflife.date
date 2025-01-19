@@ -1,13 +1,14 @@
 ---
 title: Redis
-category: db
+category: database
 iconSlug: redis
 permalink: /redis
 versionCommand: redis-server --version
 releasePolicyLink: https://redis.io/docs/about/releases/
-changelogTemplate: https://raw.githubusercontent.com/antirez/redis/__RELEASE_CYCLE__/00-RELEASENOTES
-activeSupportColumn: false
+changelogTemplate: https://raw.githubusercontent.com/redis/redis/__RELEASE_CYCLE__/00-RELEASENOTES
+eoasColumn: true
 releaseDateColumn: true
+
 identifiers:
 -   purl: pkg:generic/redis
 -   purl: pkg:deb/ubuntu/redis-server
@@ -22,37 +23,59 @@ identifiers:
 -   purl: pkg:docker/cimg/redis
 -   purl: pkg:docker/ubuntu/redis
 -   repology: redis
-auto:
--   git: https://github.com/redis/redis.git
 
+auto:
+  methods:
+  -   git: https://github.com/redis/redis.git
+
+# - eoas(x) = release(x+1)
+# - eol(x) = release(x+3)
 releases:
--   releaseCycle: "7.0"
+-   releaseCycle: "7.4"
+    releaseDate: 2024-07-29
+    eoas: false
     eol: false
-    latest: '7.0.11'
-    latestReleaseDate: 2023-04-17
+    latest: '7.4.2'
+    latestReleaseDate: 2025-01-06
+
+-   releaseCycle: "7.2"
+    releaseDate: 2023-08-15
+    eoas: 2024-07-29
+    eol: false
+    latest: '7.2.7'
+    latestReleaseDate: 2025-01-06
+
+-   releaseCycle: "7.0"
     releaseDate: 2022-04-27
+    eoas: 2023-08-15
+    eol: 2024-07-29
+    latest: '7.0.15'
+    latestReleaseDate: 2024-01-09
 
 -   releaseCycle: "6.2"
-    eol: false
-    latest: '6.2.12'
-    latestReleaseDate: 2023-04-17
     releaseDate: 2021-02-22
+    eoas: 2022-04-27
+    eol: false
+    latest: '6.2.17'
+    latestReleaseDate: 2025-01-06
 
 -   releaseCycle: "6.0"
-    eol: false
-    latest: '6.0.19'
-    latestReleaseDate: 2023-04-17
     releaseDate: 2020-04-30
+    eoas: 2021-02-22
+    eol: 2023-08-15
+    latest: '6.0.20'
+    latestReleaseDate: 2023-07-10
 
 -   releaseCycle: "5.0"
-    eol: true
+    releaseDate: 2018-10-17
+    eoas: 2020-04-30
+    eol: 2022-04-27
     latest: '5.0.14'
     latestReleaseDate: 2021-10-04
-    releaseDate: 2018-10-17
 
 ---
 
-> [Redis](https://redis.io/) is an open source (BSD licensed), in-memory data structure store, used
+> [Redis](https://redis.io/) is an in-memory data structure store, used
 > as a database, cache and message broker. It supports data structures such as strings, hashes,
 > lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius
 > queries and streams. Redis has built-in replication, Lua scripting, LRU eviction, transactions and
@@ -70,3 +93,9 @@ major security issues are committed and released as patches:
 
 - The previous minor version of the latest stable release.
 - The previous stable major release.
+
+Starting from 7.4, Redis will be dual-licensed under the
+[RSALv2 and SSPLv1](https://redis.com/blog/redis-adopts-dual-source-available-licensing/) licenses.
+7.2 is the last release under the old 3-BSD license.
+
+[Security Overview](https://github.com/redis/redis/security) with the actual list of supported versions and advisories.

@@ -1,30 +1,46 @@
 ---
 title: Nuxt
 category: framework
+tags: javascript-runtime
 permalink: /nuxt
 versionCommand: npm list nuxt
 releasePolicyLink: https://nuxt.com/docs/community/roadmap
 changelogTemplate: https://github.com/nuxt/nuxt/releases/tag/v__LATEST__
-activeSupportColumn: true
+eoasColumn: true
+eoesColumn: Commercial Support
 releaseDateColumn: true
 
+identifiers:
+-   cpe: cpe:/a:nuxt:framework
+-   cpe: cpe:2.3:a:nuxt:framework
+
 auto:
--   npm: nuxt
+  methods:
+  -   npm: nuxt
+  -   release_table: https://nuxt.com/docs/community/roadmap
+      ignore_empty_releases: true # Ignore future releases
+      selector: "table"
+      fields:
+        releaseCycle:
+          column: "Release"
+          regex: '^(?P<value>\d+)\.x.*$'
+        eol: "End Of Life"
 
 releases:
 -   releaseCycle: "3"
     releaseDate: 2022-11-16
-    support: true
+    eoas: false
     eol: false
-    latest: "3.5.1"
-    latestReleaseDate: 2023-05-21
+    latest: "3.15.2"
+    latestReleaseDate: 2025-01-15
 
 -   releaseCycle: "2"
     releaseDate: 2018-09-21
-    support: 2022-11-16
-    eol: 2023-12-31
-    latest: "2.16.3"
-    latestReleaseDate: 2023-03-17
+    eoas: 2022-11-16
+    eol: 2024-06-30
+    eoes: false
+    latest: "2.18.1"
+    latestReleaseDate: 2024-06-28
 
 ---
 
@@ -38,5 +54,6 @@ year, with an expectation of patch releases every week or so and minor releases 
 Minor and Patch releases should never contain breaking changes except for features marked as
 _experimental_.
 
-Nuxt 2 will reach End of Life (EOL) on December 31st, 2023 [at the same time as Vue 2 does](/vue).
 All supported versions should run on [all currently supported Node.js](/nodejs) releases.
+
+Commercial security support for Nuxt 2 is available through the [HeroDevs Never-Ending Support](https://www.herodevs.com/support) initiative. For more information, see [Nuxt v2](https://v2.nuxt.com/lts) docs.

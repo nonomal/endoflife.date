@@ -1,11 +1,10 @@
 ---
 title: Netgear ReadyNAS
 category: device
+tags: linux-distribution
 permalink: /readynas
 changelogTemplate: "https://www.netgear.com/support/product/{{'__RELEASE_CYCLE__'|downcase}}"
 releaseColumn: false
-releaseDateColumn: false
-activeSupportColumn: false
 
 releases:
 -   releaseCycle: "RR4360X"

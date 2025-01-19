@@ -1,29 +1,37 @@
 ---
 title: Apache Tomcat
 category: server-app
+tags: apache web-server
 iconSlug: apachetomcat
 permalink: /tomcat
 versionCommand: ./bin/version.sh
 releasePolicyLink: https://tomcat.apache.org/whichversion.html
 changelogTemplate: "https://tomcat.apache.org/tomcat-{{'__LATEST__'|split:'.'|pop|join:'.'}}-doc/changelog.html"
-activeSupportColumn: false
-releaseColumn: true
 releaseDateColumn: true
 
 identifiers:
 -   repology: tomcat
 -   purl: pkg:maven/org.apache.tomcat/tomcat
+-   purl: pkg:github/apache/tomcat
 
 auto:
--   maven: org.apache.tomcat/tomcat
+  methods:
+  -   maven: org.apache.tomcat/tomcat
 
 releases:
+-   releaseCycle: "11.0"
+    releaseDate: 2024-10-03
+    eol: false
+    minJavaVersion: 17
+    latest: "11.0.2"
+    latestReleaseDate: 2024-12-05
+
 -   releaseCycle: "10.1"
     releaseDate: 2022-09-23
     eol: false
     minJavaVersion: 11
-    latest: "10.1.9"
-    latestReleaseDate: 2023-05-09
+    latest: "10.1.34"
+    latestReleaseDate: 2024-12-05
 
 -   releaseCycle: "10.0"
     releaseDate: 2020-12-03
@@ -36,15 +44,15 @@ releases:
     releaseDate: 2017-09-27
     eol: false
     minJavaVersion: 8
-    latest: "9.0.75"
-    latestReleaseDate: 2023-05-04
+    latest: "9.0.98"
+    latestReleaseDate: 2024-12-05
 
 -   releaseCycle: "8.5"
     releaseDate: 2016-03-17
     eol: 2024-03-31
     minJavaVersion: 7
-    latest: "8.5.89"
-    latestReleaseDate: 2023-05-09
+    latest: "8.5.100"
+    latestReleaseDate: 2024-03-19
 
 -   releaseCycle: "8.0"
     releaseDate: 2014-01-29
@@ -71,6 +79,26 @@ releases:
     eol: 2012-09-30
     minJavaVersion: 1.4
     latest: "5.5.36"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 

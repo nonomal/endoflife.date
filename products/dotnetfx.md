@@ -1,6 +1,7 @@
 ---
 title: Microsoft .NET Framework
 category: framework
+tags: microsoft
 iconSlug: dotnet
 permalink: /dotnetfx
 alternative_urls:
@@ -12,6 +13,16 @@ changelogTemplate: https://github.com/microsoft/dotnet/blob/main/releases/net{{"
 releaseColumn: false
 releaseDateColumn: true
 eolColumn: Support Status
+
+auto:
+  methods:
+  -   release_table: https://dotnet.microsoft.com/en-us/download/dotnet-framework
+      selector: "table"
+      fields:
+        releaseCycle:
+          column: "Version"
+          regex: '^\.NET Framework (?P<value>\d+(\.\d+)+( SP1)?)$'
+        eol: "End of support"
 
 releases:
 -   releaseCycle: "4.8.1"
